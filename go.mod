@@ -1,10 +1,11 @@
-module github.com/ChainSafe/chainbridge-substrate-events
+module github.com/MyronFanQiu/chainbridge-substrate-events
 
 go 1.13
 
 require (
-	github.com/MyronFanQiu/go-substrate-rpc-client/v3 v2.0.0-alpha.3+incompatible
-	github.com/ethereum/go-ethereum v1.9.13 // indirect
+	github.com/MyronFanQiu/go-substrate-rpc-client/v3 v3.0.7
+	github.com/OneOfOne/xxhash v1.2.5 // indirect
+	github.com/elastic/gosigar v0.8.1-0.20180330100440-37f05ff46ffa // indirect
 	github.com/pierrec/xxHash v0.1.5 // indirect
-	golang.org/x/crypto v0.0.0-20200429183012-4b2356b1ed79 // indirect
+	github.com/spaolacci/murmur3 v1.0.1-0.20190317074736-539464a789e9 // indirect
 )
