@@ -1,7 +1,7 @@
 package events
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/types"
+	"github.com/MyronFanQiu/go-substrate-rpc-client/v3types"
 )
 
 type Events struct {
