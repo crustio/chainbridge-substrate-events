@@ -29,7 +29,7 @@ type CrustEvents struct {
 	Staking_GuaranteeSuccess                []EventGuaranteeSuccess             //nolint:stylecheck,golint
 	Staking_CutGuaranteeSuccess             []EventCutGuaranteeSuccess          //nolint:stylecheck,golint
 	Staking_ChillSuccess                    []EventChillSuccess                 //nolint:stylecheck,golint
-	Staking_UpdateLimitSuccess              []EventUpdateLimitSuccess           //nolint:stylecheck,golint
+	Staking_UpdateStakeLimitSuccess         []EventUpdateStakeLimitSuccess      //nolint:stylecheck,golint
 	Swork_RegisterSuccess                   []EventRegisterSuccess              //nolint:stylecheck,golint
 	Swork_WorksReportSuccess                []EventWorksReportSuccess           //nolint:stylecheck,golint
 	Swork_ABUpgradeSuccess                  []EventABUpgradeSuccess             //nolint:stylecheck,golint
@@ -103,7 +103,7 @@ type EventChillSuccess struct {
 	Topics          []types.Hash
 }
 
-type EventUpdateLimitSuccess struct {
+type EventUpdateStakeLimitSuccess struct {
 	Phase           types.Phase
 	Number          types.U32
 	Topics          []types.Hash
