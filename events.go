@@ -3,8 +3,8 @@ package events
 import (
 	"fmt"
 
-	"github.com/MyronFanQiu/go-substrate-rpc-client/v3/types"
-	"github.com/MyronFanQiu/go-substrate-rpc-client/v3/scale"
+	"github.com/crustio/go-substrate-rpc-client/v3/types"
+	"github.com/crustio/go-substrate-rpc-client/v3/scale"
 )
 
 type Events struct {
