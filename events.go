@@ -94,14 +94,14 @@ type CrustEvents struct {
 	Candy_CandyIssued                       []EventCandyCandyIssued                      //nolint:stylecheck,golint
 	Candy_CandyTransferred                  []EventCandyCandyTransferred                 //nolint:stylecheck,golint
 	Candy_CandyBurned                       []EventCandyCandyBurned                      //nolint:stylecheck,golint
-	CSM_Endowed                             []types.EventBalancesEndowed                       //nolint:stylecheck,golint
-	CSM_DustLost                            []types.EventBalancesDustLost                      //nolint:stylecheck,golint
-	CSM_Transfer                            []types.EventBalancesTransfer                      //nolint:stylecheck,golint
-	CSM_BalanceSet                          []types.EventBalancesBalanceSet                    //nolint:stylecheck,golint
-	CSM_Deposit                             []types.EventBalancesDeposit                       //nolint:stylecheck,golint
-	CSM_Reserved                            []types.EventBalancesReserved                      //nolint:stylecheck,golint
-	CSM_Unreserved                          []types.EventBalancesUnreserved                    //nolint:stylecheck,golint
-	CSM_ReservedRepatriated                 []types.EventBalancesReserveRepatriated            //nolint:stylecheck,golint
+	CSM_Endowed                             []types.EventBalancesEndowed                 //nolint:stylecheck,golint
+	CSM_DustLost                            []types.EventBalancesDustLost                //nolint:stylecheck,golint
+	CSM_Transfer                            []types.EventBalancesTransfer                //nolint:stylecheck,golint
+	CSM_BalanceSet                          []types.EventBalancesBalanceSet              //nolint:stylecheck,golint
+	CSM_Deposit                             []types.EventBalancesDeposit                 //nolint:stylecheck,golint
+	CSM_Reserved                            []types.EventBalancesReserved                //nolint:stylecheck,golint
+	CSM_Unreserved                          []types.EventBalancesUnreserved              //nolint:stylecheck,golint
+	CSM_ReservedRepatriated                 []types.EventBalancesReserveRepatriated      //nolint:stylecheck,golint
 }
 
 type EventEraReward struct {
