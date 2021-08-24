@@ -45,7 +45,7 @@ type CrustEvents struct {
 	Swork_RemoveFromAllowlistSuccess        []EventRemoveFromAllowlistSuccess            //nolint:stylecheck,golint
 	Swork_SetPunishmentSuccess              []EventSetPunishmentSuccess                  //nolint:stylecheck,golint
 	Swork_RemoveCodeSuccess                 []EventRemoveCodeSuccess                     //nolint:stylecheck,golint
-	Swork_ChillSuccess                      []EventChillSuccess                          //nolint:stylecheck,golint
+	Swork_ChillSuccess                      []EventSworkChillSuccess                          //nolint:stylecheck,golint
 	Swork_CancelPunishmentSuccess           []EventCancelPunishmentSuccess               //nolint:stylecheck,golint
 	Market_FileSuccess                      []EventFileSuccess                           //nolint:stylecheck,golint
 	Market_RenewFileSuccess                 []EventRenewFileSuccess                      //nolint:stylecheck,golint
@@ -242,7 +242,7 @@ type EventRemoveCodeSuccess struct {
 	Topics          []types.Hash
 }
 
-type EventChillSuccess struct {
+type EventSworkChillSuccess struct {
 	Phase           types.Phase
 	Who             types.AccountID
 	PubKey          types.Bytes
@@ -329,15 +329,15 @@ type EventCutCollateralSuccess struct {
 }
 
 type EventMarketPotList struct {
-	Phase           types.Phase
-	Address         types.AccountID
-	Address         types.AccountID
-	Address         types.AccountID
-	Address         types.AccountID
-	Topics          []types.Hash
+	Phase               types.Phase
+	CollateralAddress   types.AccountID
+	StorageAddress      types.AccountID
+	StakingAddress      types.AccountID
+	ReservedAddress     types.AccountID
+	Topics              []types.Hash
 }
 
-type EventSetEnableMarketSuccess struct {
+type EventSetMarketSwitchSuccess struct {
 	Phase           types.Phase
 	IsEnable        bool
 	Topics          []types.Hash
@@ -681,7 +681,7 @@ type EventCSMLockingCSMGuaranteeSuccess struct {
 	Topics          []types.Hash
 }
 
-type CancelCSMGuaranteeSuccess struct {
+type EventCSMLockingCancelCSMGuaranteeSuccess struct {
 	Phase           types.Phase
 	Who             types.AccountID
 	Topics          []types.Hash
