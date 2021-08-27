@@ -2,6 +2,7 @@ package events
 
 import (
 	"fmt"
+	"math/big"
 
 	"github.com/crustio/go-substrate-rpc-client/v3/types"
 	"github.com/crustio/go-substrate-rpc-client/v3/scale"
@@ -115,9 +116,26 @@ type EventEraReward struct {
 type EventValidateSuccess struct {
 	Phase           types.Phase
 	Who             types.AccountID
-	GuaranteeFee    types.U32
+	GuaranteeFee    Perbill
 	Topics          []types.Hash
 }
+
+type PerbillValue types.U32
+
+type Perbill struct {
+	Value PerbillValue
+}
+
+func (d *Perbill) Decode(decoder scale.Decoder) error {
+	_, err := decoder.DecodeUintCompact()
+	return err
+}
+
+func (d Perbill) Encode(encoder scale.Encoder) error {
+	encoder.EncodeUintCompact(*big.NewInt(0).SetUint64(uint64(d.Value)))
+	return nil
+}
+
 
 type EventGuaranteeSuccess struct {
 	Phase           types.Phase
