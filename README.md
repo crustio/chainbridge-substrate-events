@@ -1,6 +1,6 @@
 # chainbridge-substrate-events
 
-[GSRPC](https://github.com/crustio/go-substrate-rpc-client/v3) compatible type definitions of events from the [ChainBridge substrate pallet](https://github.com/ChainSafe/chainbridge-substrate/).
+[GSRPC](https://github.com/crustio/go-substrate-rpc-client/v4) compatible type definitions of events from the [ChainBridge substrate pallet](https://github.com/ChainSafe/chainbridge-substrate/).
 
 # ChainSafe Security Policy
 
