@@ -72,6 +72,7 @@ type CrustEvents struct {
 	Market_SetTotalFreeFeeLimitSuccess    []EventSetTotalFreeFeeLimitSuccess          //nolint:stylecheck,golint
 	Market_SetSpowerSuperiorSuccess       []EventSetSpowerSuperiorSuccess             //nolint:stylecheck,golint
 	Market_UpdateReplicasSuccess          []EventUpdateReplicasSuccess                //nolint:stylecheck,golint
+	Market_FileClosed                     []EventFileClosed                           //nolint:stylecheck,golint
 	Locks_UnlockStartedFrom               []EventUnlockStartedFrom                    //nolint:stylecheck,golint
 	Locks_UnlockSuccess                   []EventUnlockSuccess                        //nolint:stylecheck,golint
 	Claims_SuperiorChanged                []EventSuperiorChanged                      //nolint:stylecheck,golint
@@ -304,6 +305,12 @@ type EventCalculateSuccess struct {
 }
 
 type EventIllegalFileClosed struct {
+	Phase  types.Phase
+	Cid    types.Bytes
+	Topics []types.Hash
+}
+
+type EventFileClosed struct {
 	Phase  types.Phase
 	Cid    types.Bytes
 	Topics []types.Hash
@@ -738,12 +745,11 @@ type EventBridgeTransferFeeUpdated struct {
 }
 
 type EventQueueWorkReportSuccess struct {
-	Phase       types.Phase
-	BlockNumber types.U32
-	Index       types.U32
-	Who         types.AccountID
-	Owner       types.AccountID
-	Topics      []types.Hash
+	Phase  types.Phase
+	Anchor types.Bytes
+	Who    types.AccountID
+	Owner  types.AccountID
+	Topics []types.Hash
 }
 
 type EventSetSpowerSuperiorSuccess struct {
@@ -757,7 +763,7 @@ type EventUpdateSpowerSuccess struct {
 	Who          types.AccountID
 	BlockNumber  types.U32
 	SworkerCount types.U32
-	ProcessCount types.U32
+	FilesCount   types.U32
 	Topics       []types.Hash
 }
 
