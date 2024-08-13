@@ -767,6 +767,21 @@ type EventUpdateSpowerSuccess struct {
 	Topics       []types.Hash
 }
 
+type EventCalculateSpowersSuccess struct {
+	Phase        types.Phase
+	Who          types.AccountID
+	BlockNumber  types.U32
+	SworkerCount types.U32
+	FilesCount   types.U32
+	Topics       []types.Hash
+}
+
+type EventSetSpowerReadyPeriodSuccess struct {
+	Phase       types.Phase
+	BlockNumber types.U32
+	Topics      []types.Hash
+}
+
 type EventUpdateReplicasSuccess struct {
 	Phase        types.Phase
 	Who          types.AccountID
