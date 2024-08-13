@@ -73,6 +73,8 @@ type CrustEvents struct {
 	Market_SetSpowerSuperiorSuccess       []EventSetSpowerSuperiorSuccess             //nolint:stylecheck,golint
 	Market_UpdateReplicasSuccess          []EventUpdateReplicasSuccess                //nolint:stylecheck,golint
 	Market_FileClosed                     []EventFileClosed                           //nolint:stylecheck,golint
+	Market_CalculateSpowersSuccess        []EventCalculateSpowersSuccess              //nolint:stylecheck,golint
+	Market_SetSpowerReadyPeriodSuccess    []EventSetSpowerReadyPeriodSuccess          //nolint:stylecheck,golint
 	Locks_UnlockStartedFrom               []EventUnlockStartedFrom                    //nolint:stylecheck,golint
 	Locks_UnlockSuccess                   []EventUnlockSuccess                        //nolint:stylecheck,golint
 	Claims_SuperiorChanged                []EventSuperiorChanged                      //nolint:stylecheck,golint
